@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_23/presentation/download_card.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenTwentyThree extends StatelessWidget {
@@ -12,93 +13,10 @@ class DirtyScreenTwentyThree extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 1',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.5),
-                  SizedBox(height: 8),
-                  Text('50% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 2',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.8),
-                  SizedBox(height: 8),
-                  Text('80% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.all(16.0),
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Downloading File 3',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  LinearProgressIndicator(value: 0.3),
-                  SizedBox(height: 8),
-                  Text('30% completed',
-                      style: TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
-            ),
+            DownloadCard(fileNumber: 1, completeValue: 0.5),
+            DownloadCard(fileNumber: 2, completeValue: 0.8),
+            DownloadCard(fileNumber: 3, completeValue: 0.3),
+            DownloadCard(fileNumber: 4, completeValue: 0.7),
           ],
         ),
       ),
