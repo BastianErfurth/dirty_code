@@ -13,11 +13,11 @@ class DirtyScreenTwelve extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            const FoodContainer(
+            FoodContainer(
                 color: Colors.lightBlue, foodName: "Döner", price: 10),
-            const FoodContainer(
+            FoodContainer(
                 color: Colors.lightGreenAccent, foodName: "Yufka", price: 20),
-            const FoodContainer(
+            FoodContainer(
                 color: Colors.purpleAccent, foodName: "Pizza", price: 30),
             FoodContainer(
                 color: Colors.pinkAccent, foodName: "Sushi", price: 40),
